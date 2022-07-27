@@ -37,7 +37,6 @@ conversationsRouter.get("/:userId",
 )
 
 // get conv includes two userId
-
 conversationsRouter.get("/find/:firstUserId/:secondUserId", async (req, res) => {
     try {
         const users = {
@@ -45,6 +44,7 @@ conversationsRouter.get("/find/:firstUserId/:secondUserId", async (req, res) => 
             "secondUserId" : req.params.secondUserId
         } 
       const conversation = await ConversationService.findConversationOfTwoUsers({users});
+      console.log("conversation: ", conversation);
       res.status(200).json(conversation)
     } catch (err) {
       res.status(500).json(err);

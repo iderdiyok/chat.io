@@ -18,12 +18,10 @@ async function findConversationsOfUser(userId) {
     return getConversation
 }
 async function findConversationsOfTwoUsers({users}) {
-    console.log("users-dao", users  );
     const db = await getDB()
     const getConversation = await db.collection("conversations").find({
         members: { $in: [users.firstUserId, users.secondUserId] }
-      }).toArray()      
-      console.log("getConversation: ", getConversation)
+    }).toArray()      
     return getConversation
 }
 

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import nav from "../nav.png"
 
 const Navigation = (props) => {
 
@@ -8,7 +9,7 @@ const Navigation = (props) => {
     return (
         <nav className="col-2 navigation d-flex flex-column text-center navbar navbar-light hide-scrollbar">
             <Link to="/home" classNameName="App-text">
-                <img src="https://static.wixstatic.com/media/1cee7c_88a0deebf23c4874a2dc952d1eda359e%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/1cee7c_88a0deebf23c4874a2dc952d1eda359e%7Emv2.png" alt="" />
+                <img className="w-50" src={nav} alt="" />
             </Link>
             <ul className="d-flex nav navbar-nav flex-row flex-xl-column flex-grow-1 justify-content-between justify-content-xl-center align-items-center w-100 py-4 py-lg-2 px-lg-3" role="tablist">
                 <li className="nav-item">
